@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 }
 
 // Create database
-$sql = "CREATE DATABASE mygag";
+$sql = "CREATE DATABASE quotes";
 if ($conn->query($sql) === TRUE) {
     echo "Database created successfully";
 } else {
