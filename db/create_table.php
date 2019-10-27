@@ -4,7 +4,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 // do not change this
-$dbname = "mygag";
+$dbname = "quotes";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,14 +14,15 @@ if ($conn->connect_error) {
 }
 
 // sql to create table
-$sql = "CREATE TABLE mygags (
+$sql = "CREATE TABLE quotes (
 id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-gag VARCHAR(800) NOT NULL
+quotes VARCHAR(1200) NOT NULL,
+author VARCHAR(100) NOT NULL
 )";
 
-$sql_2 = "CREATE TABLE mygag_rating (
+$sql_2 = "CREATE TABLE quotes_rating (
     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    gags INT(11) NULL,
+    quotes_id INT(11) NULL,
     rating INT(11) NULL
     )";
 
